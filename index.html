@@ -1,29 +1,734 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Full-stack developer portfolio — Java, Spring Boot, Angular, MongoDB and Azure." />
-<title>Aravind S. — Full-Stack Developer</title>
-<style>
-:root{--bg:#f6f8fc;--panel:#fff;--panel2:#eef3ff;--text:#111827;--muted:#5f6b7a;--line:#dfe5ef;--accent:#3157d5;--accent2:#0ea5c9;--accent3:#7c3aed;--max:1120px;--shadow:0 18px 50px rgba(31,50,90,.09)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0%,rgba(49,87,213,.12),transparent 28%),radial-gradient(circle at 5% 25%,rgba(14,165,201,.09),transparent 25%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.nav{position:sticky;top:0;z-index:10;background:rgba(246,248,252,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(31,41,55,.08)}.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:950;letter-spacing:-.045em;font-size:21px}.brand strong{color:var(--text)}.hero-role{font-size:.48em;letter-spacing:-.035em;color:#334155}.brand span{color:var(--accent)}.links{display:flex;gap:26px;font-size:14px;color:#596579}.links a:hover{color:var(--accent)}.hero{min-height:calc(100vh - 70px);display:grid;align-items:center;padding:70px 0 65px}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #d7deeb;border-radius:999px;background:#fff;font-size:13px;color:#536074;box-shadow:0 5px 20px rgba(31,50,90,.05)}.dot{width:7px;height:7px;border-radius:50%;background:#16a56d;box-shadow:0 0 14px rgba(22,165,109,.45)}.hero h1{font-size:clamp(48px,6.8vw,82px);line-height:.98;letter-spacing:-.065em;max-width:800px;margin:22px 0}.gradient{background:linear-gradient(90deg,var(--accent),var(--accent3) 48%,var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:680px;color:var(--muted);font-size:18px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 17px;border-radius:12px;border:1px solid #d4dce8;font-weight:750;font-size:14px;transition:.2s;background:#fff}.btn.primary{background:linear-gradient(135deg,var(--accent),#4f46e5);color:#fff;border-color:transparent;box-shadow:0 10px 25px rgba(49,87,213,.2)}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(31,50,90,.11)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:55px}.stat{padding:18px;border:1px solid var(--line);background:rgba(255,255,255,.8);border-radius:15px;box-shadow:0 8px 25px rgba(31,50,90,.04)}.stat b{font-size:24px;display:block}.stat span{font-size:12px;color:var(--muted)}.hero-art{position:relative;min-height:430px;border-radius:30px;border:1px solid #dbe3f1;background:linear-gradient(145deg,#fff 10%,#edf2ff 100%);box-shadow:var(--shadow);overflow:hidden}.hero-art:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(124,58,237,.12);filter:blur(2px);right:-80px;top:-70px}.hero-art img{width:100%;height:100%;object-fit:cover;display:block}.floating{position:absolute;bottom:24px;left:24px;background:rgba(255,255,255,.94);border:1px solid #dce3ee;border-radius:15px;padding:14px 16px;box-shadow:0 15px 35px rgba(31,50,90,.13);font-size:13px}.floating b{display:block}.floating span{color:var(--muted);font-size:11px}section{padding:100px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.kicker{color:var(--accent);text-transform:uppercase;font-size:12px;font-weight:850;letter-spacing:.16em}.section-head h2{font-size:40px;letter-spacing:-.04em;margin:8px 0 0}.section-head p{max-width:520px;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{border:1px solid var(--line);background:rgba(255,255,255,.82);border-radius:20px;padding:25px;box-shadow:0 8px 28px rgba(31,50,90,.045)}.card h3{margin:0 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}.taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.tag{font-size:12px;padding:6px 9px;border:1px solid #dbe2ee;border-radius:8px;color:#455269;background:#f8faff}.featured{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.project{min-height:330px;padding:32px;border-radius:24px;border:1px solid #d9e1ef;background:linear-gradient(135deg,#eef3ff,#fff 58%,#eefbff);box-shadow:var(--shadow)}.project h3{font-size:29px;margin:12px 0}.project p{color:#5e6979;max-width:670px}.project-visual{margin:-32px -32px 24px;height:150px;overflow:hidden;border-radius:24px 24px 0 0;border-bottom:1px solid #dce4f1}.project-visual img{width:100%;height:100%;object-fit:cover}.impact{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}.impact div{padding:14px;border-radius:12px;background:rgba(49,87,213,.055);border:1px solid #dce4f1}.impact b{display:block}.impact span{font-size:11px;color:var(--muted)}.timeline{position:relative;display:grid;gap:14px}.job{display:grid;grid-template-columns:160px 1fr;gap:30px;padding:22px 0;border-top:1px solid var(--line)}.job time{font-size:13px;color:var(--muted)}.job h3{margin:0 0 4px}.job .company{color:var(--accent);font-size:13px;font-weight:750}.job p{color:var(--muted);margin:10px 0 0}.skillbox{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.skill{padding:20px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.8);box-shadow:0 7px 22px rgba(31,50,90,.04)}.skill b{display:block;margin-bottom:8px}.skill small{color:var(--muted)}.contact{border:1px solid #d8e0ed;border-radius:28px;padding:55px;background:radial-gradient(circle at 90% 20%,rgba(14,165,201,.12),transparent 30%),radial-gradient(circle at 10% 80%,rgba(124,58,237,.11),transparent 35%),#fff;text-align:center;box-shadow:var(--shadow)}.contact h2{font-size:clamp(36px,5vw,58px);letter-spacing:-.05em;margin:8px 0}.contact p{color:var(--muted);max-width:620px;margin:0 auto 25px}.footer{padding:35px 0;color:#7a8595;font-size:12px;border-top:1px solid var(--line)}.mobile{display:none}@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:320px}.links{display:none}.mobile{display:block}.grid,.featured,.skillbox{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.job{grid-template-columns:1fr;gap:5px}.impact{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.hero{padding-top:55px}}@media(max-width:520px){.wrap{width:min(calc(100% - 28px),var(--max))}.hero h1{font-size:48px}.hero p{font-size:16px}.stats{gap:8px}.stat{padding:14px}.stat b{font-size:20px}section{padding:75px 0}}
-</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Full-stack developer portfolio — Java, Spring Boot, Angular, MongoDB and Azure." />
+    <title>Aravind Sivaraj. — Full-Stack Developer</title>
+    <style>
+        :root {
+            --bg: #f6f8fc;
+            --panel: #fff;
+            --panel2: #eef3ff;
+            --text: #111827;
+            --muted: #5f6b7a;
+            --line: #dfe5ef;
+            --accent: #3157d5;
+            --accent2: #0ea5c9;
+            --accent3: #7c3aed;
+            --max: 1120px;
+            --shadow: 0 18px 50px rgba(31, 50, 90, .09)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at 85% 0%, rgba(49, 87, 213, .12), transparent 28%), radial-gradient(circle at 5% 25%, rgba(14, 165, 201, .09), transparent 25%), var(--bg);
+            color: var(--text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            line-height: 1.6
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .wrap {
+            width: min(calc(100% - 40px), var(--max));
+            margin: auto
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(246, 248, 252, .82);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(31, 41, 55, .08)
+        }
+
+        .navin {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .brand {
+            font-weight: 950;
+            letter-spacing: -.045em;
+            font-size: 21px
+        }
+
+        .brand strong {
+            color: var(--text)
+        }
+
+        .hero-role {
+            font-size: .48em;
+            letter-spacing: -.035em;
+            color: #334155
+        }
+
+        .brand span {
+            color: var(--accent)
+        }
+
+        .links {
+            display: flex;
+            gap: 26px;
+            font-size: 14px;
+            color: #596579
+        }
+
+        .links a:hover {
+            color: var(--accent)
+        }
+
+        .hero {
+            min-height: calc(100vh - 70px);
+            display: grid;
+            align-items: center;
+            padding: 70px 0 65px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.12fr .88fr;
+            gap: 55px;
+            align-items: center
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 7px 12px;
+            border: 1px solid #d7deeb;
+            border-radius: 999px;
+            background: #fff;
+            font-size: 13px;
+            color: #536074;
+            box-shadow: 0 5px 20px rgba(31, 50, 90, .05)
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #16a56d;
+            box-shadow: 0 0 14px rgba(22, 165, 109, .45)
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 6.8vw, 82px);
+            line-height: .98;
+            letter-spacing: -.065em;
+            max-width: 800px;
+            margin: 22px 0
+        }
+
+        .gradient {
+            background: linear-gradient(90deg, var(--accent), var(--accent3) 48%, var(--accent2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 18px
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px
+        }
+
+        .btn {
+            padding: 12px 17px;
+            border-radius: 12px;
+            border: 1px solid #d4dce8;
+            font-weight: 750;
+            font-size: 14px;
+            transition: .2s;
+            background: #fff
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, var(--accent), #4f46e5);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 10px 25px rgba(49, 87, 213, .2)
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(31, 50, 90, .11)
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 55px
+        }
+
+        .stat {
+            padding: 18px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .8);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(31, 50, 90, .04)
+        }
+
+        .stat b {
+            font-size: 24px;
+            display: block
+        }
+
+        .stat span {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .hero-art {
+            position: relative;
+            min-height: 430px;
+            border-radius: 30px;
+            border: 1px solid #dbe3f1;
+            background: linear-gradient(145deg, #fff 10%, #edf2ff 100%);
+            box-shadow: var(--shadow);
+            overflow: hidden
+        }
+
+        .hero-art:before {
+            content: "";
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: rgba(124, 58, 237, .12);
+            filter: blur(2px);
+            right: -80px;
+            top: -70px
+        }
+
+        .hero-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .floating {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: rgba(255, 255, 255, .94);
+            border: 1px solid #dce3ee;
+            border-radius: 15px;
+            padding: 14px 16px;
+            box-shadow: 0 15px 35px rgba(31, 50, 90, .13);
+            font-size: 13px
+        }
+
+        .floating b {
+            display: block
+        }
+
+        .floating span {
+            color: var(--muted);
+            font-size: 11px
+        }
+
+        section {
+            padding: 100px 0
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: end;
+            margin-bottom: 38px
+        }
+
+        .kicker {
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .16em
+        }
+
+        .section-head h2 {
+            font-size: 40px;
+            letter-spacing: -.04em;
+            margin: 8px 0 0
+        }
+
+        .section-head p {
+            max-width: 520px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .82);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 28px rgba(31, 50, 90, .045)
+        }
+
+        .card h3 {
+            margin: 0 0 8px;
+            font-size: 19px
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        .taglist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 6px 9px;
+            border: 1px solid #dbe2ee;
+            border-radius: 8px;
+            color: #455269;
+            background: #f8faff
+        }
+
+        .featured {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 16px
+        }
+
+        .project {
+            min-height: 330px;
+            padding: 32px;
+            border-radius: 24px;
+            border: 1px solid #d9e1ef;
+            background: linear-gradient(135deg, #eef3ff, #fff 58%, #eefbff);
+            box-shadow: var(--shadow)
+        }
+
+        .project h3 {
+            font-size: 29px;
+            margin: 12px 0
+        }
+
+        .project p {
+            color: #5e6979;
+            max-width: 670px
+        }
+
+        .project-visual {
+            margin: -32px -32px 24px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 24px 24px 0 0;
+            border-bottom: 1px solid #dce4f1
+        }
+
+        .project-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .impact {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 28px
+        }
+
+        .impact div {
+            padding: 14px;
+            border-radius: 12px;
+            background: rgba(49, 87, 213, .055);
+            border: 1px solid #dce4f1
+        }
+
+        .impact b {
+            display: block
+        }
+
+        .impact span {
+            font-size: 11px;
+            color: var(--muted)
+        }
+
+        .timeline {
+            position: relative;
+            display: grid;
+            gap: 14px
+        }
+
+        .job {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 30px;
+            padding: 22px 0;
+            border-top: 1px solid var(--line)
+        }
+
+        .job time {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .job h3 {
+            margin: 0 0 4px
+        }
+
+        .job .company {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 750
+        }
+
+        .job p {
+            color: var(--muted);
+            margin: 10px 0 0
+        }
+
+        .skillbox {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px
+        }
+
+        .skill {
+            padding: 20px;
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            background: rgba(255, 255, 255, .8);
+            box-shadow: 0 7px 22px rgba(31, 50, 90, .04)
+        }
+
+        .skill b {
+            display: block;
+            margin-bottom: 8px
+        }
+
+        .skill small {
+            color: var(--muted)
+        }
+
+        .contact {
+            border: 1px solid #d8e0ed;
+            border-radius: 28px;
+            padding: 55px;
+            background: radial-gradient(circle at 90% 20%, rgba(14, 165, 201, .12), transparent 30%), radial-gradient(circle at 10% 80%, rgba(124, 58, 237, .11), transparent 35%), #fff;
+            text-align: center;
+            box-shadow: var(--shadow)
+        }
+
+        .contact h2 {
+            font-size: clamp(36px, 5vw, 58px);
+            letter-spacing: -.05em;
+            margin: 8px 0
+        }
+
+        .contact p {
+            color: var(--muted);
+            max-width: 620px;
+            margin: 0 auto 25px
+        }
+
+        .footer {
+            padding: 35px 0;
+            color: #7a8595;
+            font-size: 12px;
+            border-top: 1px solid var(--line)
+        }
+
+        .mobile {
+            display: none
+        }
+
+        @media(max-width:900px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero-art {
+                min-height: 320px
+            }
+
+            .links {
+                display: none
+            }
+
+            .mobile {
+                display: block
+            }
+
+            .grid,
+            .featured,
+            .skillbox {
+                grid-template-columns: 1fr
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .job {
+                grid-template-columns: 1fr;
+                gap: 5px
+            }
+
+            .impact {
+                grid-template-columns: 1fr
+            }
+
+            .section-head {
+                display: block
+            }
+
+            .section-head p {
+                margin-top: 12px
+            }
+
+            .hero {
+                padding-top: 55px
+            }
+        }
+
+        @media(max-width:520px) {
+            .wrap {
+                width: min(calc(100% - 28px), var(--max))
+            }
+
+            .hero h1 {
+                font-size: 48px
+            }
+
+            .hero p {
+                font-size: 16px
+            }
+
+            .stats {
+                gap: 8px
+            }
+
+            .stat {
+                padding: 14px
+            }
+
+            .stat b {
+                font-size: 20px
+            }
+
+            section {
+                padding: 75px 0
+            }
+        }
+    </style>
 </head>
+
 <body>
-<nav class="nav"><div class="wrap navin"><a class="brand" href="#top"><strong>Aravind S.</strong><span>.</span></a><div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div><a class="btn ghost mobile" href="#contact">Let's talk</a></div></nav>
-<main id="top">
-<section class="hero"><div class="wrap hero-grid"><div>
-<div class="eyebrow"><span class="dot"></span> Full-Stack Developer · Open to opportunities</div>
-<h1><span class="gradient">Aravind S.</span><br><span class="hero-role">Full-Stack Developer</span></h1>
-<p>Java & Spring Boot developer with ~4 years of hands-on experience across backend, frontend, databases, cloud deployment and production support. I build practical, maintainable web applications and enjoy working across the stack.</p>
-<div class="actions"><a class="btn primary" href="#skills">Explore my skills ↓</a><a class="btn ghost" href="#about">About me</a></div>
-<div class="stats"><div class="stat"><b>~4 yrs</b><span>Professional experience</span></div><div class="stat"><b>Full-stack</b><span>Backend + frontend ownership</span></div><div class="stat"><b>Azure</b><span>Cloud deployment & environments</span></div><div class="stat"><b>E2E</b><span>Testing, regression & support</span></div></div>
-</div><div class="hero-art"><img src="assets/hero-tech.svg" alt="Abstract full-stack engineering workspace illustration"><div class="floating"><b>Java · Angular · Azure</b><span>Building production-ready systems</span></div></div></div></section>
-<section id="about"><div class="wrap"><div class="section-head"><div><div class="kicker">About</div><h2>A developer who works across the stack.</h2></div><p>I am a full-stack developer who enjoys understanding the complete path from requirement to working software. My strongest areas are Java/Spring Boot backend development, Angular frontend development, MongoDB and Azure-based delivery.</p></div><div class="grid"><article class="card"><h3>Product-minded</h3><p>Comfortable understanding business requirements, client expectations and the practical trade-offs behind a feature.</p></article><article class="card"><h3>End-to-end delivery</h3><p>Development, testing, regression, deployment and production support are all part of my workflow.</p></article><article class="card"><h3>Reliable systems</h3><p>Experience with large data flows, web applications, cloud environments and troubleshooting production issues.</p></article></div></div></section>
-<section id="skills"><div class="wrap"><div class="section-head"><div><div class="kicker">Stack</div><h2>Tools I build with.</h2></div><p>A focused full-stack toolkit suited for business applications and production delivery.</p></div><div class="skillbox"><div class="skill"><b>Backend</b><small>Java · Spring Boot · REST APIs · Spring ecosystem</small></div><div class="skill"><b>Frontend</b><small>Angular · HTML · CSS · JavaScript / TypeScript</small></div><div class="skill"><b>Data & infrastructure</b><small>MongoDB · Redis · Docker · Tomcat</small></div><div class="skill"><b>Cloud & delivery</b><small>Microsoft Azure · Dev/SIT deployments · Testing · Regression</small></div></div></div></section>
-<section id="work"><div class="wrap"><div class="section-head"><div><div class="kicker">What I do</div><h2>Where my skills come together.</h2></div><p>My day-to-day work combines development, debugging, testing and delivery rather than focusing on just one technology.</p></div><div class="grid"><article class="card"><h3>Backend engineering</h3><p>Build REST APIs and business logic with Java and Spring Boot, with attention to maintainability, validation and real production behavior.</p><div class="taglist"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">REST APIs</span></div></article><article class="card"><h3>Frontend development</h3><p>Create practical Angular interfaces and connect them cleanly with backend services for complete application workflows.</p><div class="taglist"><span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">HTML/CSS</span></div></article><article class="card"><h3>Delivery & reliability</h3><p>Handle testing, regression, Dev/SIT deployments, troubleshooting and production support in Azure-hosted environments.</p><div class="taglist"><span class="tag">Azure</span><span class="tag">Testing</span><span class="tag">Deployment</span></div></article></div></div></section>
-<section id="experience"><div class="wrap"><div class="section-head"><div><div class="kicker">Experience</div><h2>From internship to ownership.</h2></div><p>A progression toward broader technical responsibility and full-stack delivery.</p></div><div class="timeline"><div class="job"><time>~4 years</time><div><h3>Full-Stack Developer</h3><div class="company">Current role · Software Engineering</div><p>Developing and supporting web applications with Java/Spring Boot, Angular and MongoDB; handling testing, regression, client-facing work, Azure Dev/SIT deployments and production support.</p></div></div><div class="job"><time>Earlier</time><div><h3>Software Engineering Intern → Developer</h3><div class="company">Career progression within the same organization</div><p>Started by learning the application and delivery ecosystem, then grew into hands-on development and ownership of production functionality.</p></div></div></div></div></section>
-<section id="contact"><div class="wrap"><div class="contact"><div class="kicker">Let's connect</div><h2>Let’s build something useful.</h2><p>I’m open to full-stack and product-focused opportunities where I can use my backend, frontend and cloud experience to solve real engineering problems.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Get in touch</a><a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a><a class="btn ghost" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></div></div></div></section>
-</main><footer class="footer"><div class="wrap">© 2026 Aravind S. · Full-Stack Developer</div></footer>
-</body></html>
+    <nav class="nav">
+        <div class="wrap navin"><a class="brand" href="#top"><strong>Aravind Sivaraj.</strong><span>.</span></a>
+            <div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a
+                    href="#experience">Experience</a><a href="#contact">Contact</a></div><a class="btn ghost mobile"
+                href="#contact">Let's talk</a>
+        </div>
+    </nav>
+    <main id="top">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <div class="eyebrow"><span class="dot"></span> Full-Stack Developer · Open to opportunities</div>
+                    <h1><span class="gradient">Aravind Sivaraj.</span><br><span class="hero-role">Full-Stack Developer</span>
+                    </h1>
+                    <p>Java & Spring Boot developer with ~4 years of hands-on experience across backend, frontend,
+                        databases, cloud deployment and production support. I build practical, maintainable web
+                        applications and enjoy working across the stack.</p>
+                    <div class="actions"><a class="btn primary" href="#skills">Explore my skills ↓</a><a
+                            class="btn ghost" href="#about">About me</a></div>
+                    <div class="stats">
+                        <div class="stat"><b>~4 yrs</b><span>Professional experience</span></div>
+                        <div class="stat"><b>Full-stack</b><span>Backend + frontend ownership</span></div>
+                        <div class="stat"><b>Azure</b><span>Cloud deployment & environments</span></div>
+                        <div class="stat"><b>E2E</b><span>Testing, regression & support</span></div>
+                    </div>
+                </div>
+                <div class="hero-art"><img src="assets/hero-tech.svg"
+                        alt="Abstract full-stack engineering workspace illustration">
+                    <div class="floating"><b>Java · Angular · Azure</b><span>Building production-ready systems</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker">About</div>
+                        <h2>A developer who works across the stack.</h2>
+                    </div>
+                    <p>I am a full-stack developer who enjoys understanding the complete path from requirement to
+                        working software. My strongest areas are Java/Spring Boot backend development, Angular frontend
+                        development, MongoDB and Azure-based delivery.</p>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Product-minded</h3>
+                        <p>Comfortable understanding business requirements, client expectations and the practical
+                            trade-offs behind a feature.</p>
+                    </article>
+                    <article class="card">
+                        <h3>End-to-end delivery</h3>
+                        <p>Development, testing, regression, deployment and production support are all part of my
+                            workflow.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Reliable systems</h3>
+                        <p>Experience with large data flows, web applications, cloud environments and troubleshooting
+                            production issues.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker">Stack</div>
+                        <h2>Tools I build with.</h2>
+                    </div>
+                    <p>A focused full-stack toolkit suited for business applications and production delivery.</p>
+                </div>
+                <div class="skillbox">
+                    <div class="skill"><b>Backend</b><small>Java · Spring Boot · REST APIs · Spring ecosystem</small>
+                    </div>
+                    <div class="skill"><b>Frontend</b><small>Angular · HTML · CSS · JavaScript / TypeScript</small>
+                    </div>
+                    <div class="skill"><b>Data & infrastructure</b><small>MongoDB · Redis · Docker · Tomcat</small>
+                    </div>
+                    <div class="skill"><b>Cloud & delivery</b><small>Microsoft Azure · Dev/SIT deployments · Testing ·
+                            Regression</small></div>
+                </div>
+            </div>
+        </section>
+        <section id="work">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker">What I do</div>
+                        <h2>Where my skills come together.</h2>
+                    </div>
+                    <p>My day-to-day work combines development, debugging, testing and delivery rather than focusing on
+                        just one technology.</p>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Backend engineering</h3>
+                        <p>Build REST APIs and business logic with Java and Spring Boot, with attention to
+                            maintainability, validation and real production behavior.</p>
+                        <div class="taglist"><span class="tag">Java</span><span class="tag">Spring Boot</span><span
+                                class="tag">REST APIs</span></div>
+                    </article>
+                    <article class="card">
+                        <h3>Frontend development</h3>
+                        <p>Create practical Angular interfaces and connect them cleanly with backend services for
+                            complete application workflows.</p>
+                        <div class="taglist"><span class="tag">Angular</span><span class="tag">TypeScript</span><span
+                                class="tag">HTML/CSS</span></div>
+                    </article>
+                    <article class="card">
+                        <h3>Delivery & reliability</h3>
+                        <p>Handle testing, regression, Dev/SIT deployments, troubleshooting and production support in
+                            Azure-hosted environments.</p>
+                        <div class="taglist"><span class="tag">Azure</span><span class="tag">Testing</span><span
+                                class="tag">Deployment</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker">Experience</div>
+                        <h2>From internship to ownership.</h2>
+                    </div>
+                    <p>A progression toward broader technical responsibility and full-stack delivery.</p>
+                </div>
+                <div class="timeline">
+                    <div class="job"><time>~4 years</time>
+                        <div>
+                            <h3>Full-Stack Developer</h3>
+                            <div class="company">Current role · Software Engineering</div>
+                            <p>Developing and supporting web applications with Java/Spring Boot, Angular and MongoDB;
+                                handling testing, regression, client-facing work, Azure Dev/SIT deployments and
+                                production support.</p>
+                        </div>
+                    </div>
+                    <div class="job"><time>Earlier</time>
+                        <div>
+                            <h3>Software Engineering Intern → Developer</h3>
+                            <div class="company">Career progression within the same organization</div>
+                            <p>Started by learning the application and delivery ecosystem, then grew into hands-on
+                                development and ownership of production functionality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="wrap">
+                <div class="contact">
+                    <div class="kicker">Let's connect</div>
+                    <h2>Let’s build something useful.</h2>
+                    <p>I’m open to full-stack and product-focused opportunities where I can use my backend, frontend and
+                        cloud experience to solve real engineering problems.</p>
+                    <div class="actions" style="justify-content:center"><a class="btn primary"
+                            href="mailto:aravindsofficial143@gmail.com">Get in touch</a><a class="btn ghost"
+                            href="https://www.linkedin.com/in/aravind-s-259792183" target="_blank"
+                            rel="noreferrer">LinkedIn</a><a class="btn ghost" href="https://github.com/AravindSivaraj"
+                            target="_blank" rel="noreferrer">GitHub</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrap">© 2026 Aravind Sivaraj. · Full-Stack Developer</div>
+    </footer>
+</body>
+
+</html>
